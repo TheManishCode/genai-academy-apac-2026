@@ -1,9 +1,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from backend.app.api.routes import alerts, assistant, health, predictions, reports, risks
-from backend.app.core.config import settings
-from backend.app.core.logging import configure_logging
+from app.api.routes import alerts, assistant, health, predictions, reports, risks
+from app.core.config import settings
+from app.core.logging import configure_logging
 
 configure_logging()
 
