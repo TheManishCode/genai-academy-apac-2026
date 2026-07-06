@@ -54,6 +54,10 @@ class AssistantRequest(BaseModel):
     question: str
     role: UserRole = UserRole.government
     location: str | None = None
+    model: str | None = Field(
+        default=None,
+        description="Optional NVIDIA NIM model id override, e.g. 'nvidia/llama-3.1-nemotron-70b-instruct'.",
+    )
 
 
 class AssistantResponse(BaseModel):

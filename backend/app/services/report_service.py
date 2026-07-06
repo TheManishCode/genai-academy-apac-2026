@@ -17,6 +17,6 @@ class ReportService:
             severity=severity,
             urgency=urgency,
             location=location,
-            summary=f"Gemini extraction: {request.text[:180]}",
+            summary=f"Auto-extracted: {request.text[:180]}",
             created_at=datetime.now(timezone.utc),
         )
