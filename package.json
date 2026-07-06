@@ -1,0 +1,16 @@
+{
+  "name": "ecomind-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI Decision Intelligence Platform for Climate Resilience & Disaster Preparedness.",
+  "scripts": {
+    "dev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "preview": "npm --prefix frontend run preview",
+    "backend": "uvicorn backend.app.main:app --reload --host 0.0.0.0 --port 8000",
+    "test": "pytest backend/tests"
+  },
+  "workspaces": [
+    "frontend"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "weather": ["OpenWeather", "NOAA", "IMD"],
+  "aqi": ["OpenAQ", "CPCB"],
+  "flood": ["NASA", "Sentinel", "ISRO", "river gauge feeds"],
+  "population": ["Census"],
+  "roads": ["OpenStreetMap"],
+  "hospitals": ["Government open data", "FHIR feeds"],
+  "citizen_reports": ["Synthetic reports", "Firebase-authenticated submissions"]
+}

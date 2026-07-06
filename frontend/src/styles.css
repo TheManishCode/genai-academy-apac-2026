@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #131820;
+  background: #f8fbfc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.leaflet-container {
+  height: 100%;
+  min-height: 420px;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(19, 24, 32, 0.08);
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.11);
+  backdrop-filter: blur(18px);
+}
+
+.dark .glass {
+  background: rgba(17, 24, 39, 0.78);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.risk-marker {
+  border: 2px solid white;
+  border-radius: 999px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.28);
+}

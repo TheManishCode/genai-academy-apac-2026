@@ -1,0 +1,13 @@
+.env
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+node_modules/
+dist/
+build/
+.DS_Store
+*.pyc
+*.log
+models/*.joblib
+models/*.pkl
