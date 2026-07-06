@@ -1,7 +1,7 @@
 from fastapi import APIRouter, File, Form, UploadFile
 
-from backend.app.models.schemas import CitizenReport, CitizenReportRequest
-from backend.app.services.report_service import ReportService
+from app.models.schemas import CitizenReport, CitizenReportRequest
+from app.services.report_service import ReportService
 
 router = APIRouter()
 service = ReportService()

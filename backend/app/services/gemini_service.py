@@ -2,9 +2,9 @@ import logging
 
 from tenacity import retry, stop_after_attempt, wait_exponential
 
-from backend.app.models.schemas import AssistantRequest, AssistantResponse
-from backend.app.services.decision_engine import DecisionEngine
-from backend.app.services.synthetic_data import get_ward_risks
+from app.models.schemas import AssistantRequest, AssistantResponse
+from app.services.decision_engine import DecisionEngine
+from app.services.synthetic_data import get_ward_risks
 
 logger = logging.getLogger(__name__)
 

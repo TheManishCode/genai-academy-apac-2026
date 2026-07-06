@@ -1,7 +1,7 @@
 import logging
 from dataclasses import dataclass
 
-from backend.app.core.config import settings
+from app.core.config import settings
 
 logger = logging.getLogger(__name__)
 

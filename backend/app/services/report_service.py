@@ -1,7 +1,7 @@
 from datetime import datetime, timezone
 from uuid import uuid4
 
-from backend.app.models.schemas import CitizenReport, CitizenReportRequest
+from app.models.schemas import CitizenReport, CitizenReportRequest
 
 
 class ReportService:

@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 
-from backend.app.models.schemas import WardRisk
-from backend.app.services.synthetic_data import get_ward_risks
+from app.models.schemas import WardRisk
+from app.services.synthetic_data import get_ward_risks
 
 router = APIRouter()
 

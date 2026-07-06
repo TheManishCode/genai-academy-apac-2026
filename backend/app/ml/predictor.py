@@ -1,7 +1,7 @@
 from datetime import datetime, timezone
 
-from backend.app.models.schemas import PredictionRequest, PredictionResponse
-from backend.app.services.synthetic_data import get_ward_risks, shap_factors
+from app.models.schemas import PredictionRequest, PredictionResponse
+from app.services.synthetic_data import get_ward_risks, shap_factors
 
 
 class PredictionEngine:

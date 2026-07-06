@@ -1,4 +1,4 @@
-from backend.app.models.schemas import WardRisk
+from app.models.schemas import WardRisk
 
 
 def get_ward_risks() -> list[WardRisk]:

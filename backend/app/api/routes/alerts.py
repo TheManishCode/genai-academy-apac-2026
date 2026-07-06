@@ -2,7 +2,7 @@ from datetime import datetime, timezone
 
 from fastapi import APIRouter
 
-from backend.app.models.schemas import Alert
+from app.models.schemas import Alert
 
 router = APIRouter()
 

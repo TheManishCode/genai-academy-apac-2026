@@ -1,0 +1,17 @@
+{
+    "$schema": "https://openapi.vercel.sh/vercel.json",
+    "buildCommand": "npm run build",
+    "installCommand": "npm install",
+    "outputDirectory": "frontend/dist",
+    "functions": {
+        "api/**/*.py": {
+            "excludeFiles": "{ml/**,models/**,docker/**,terraform/**,docs/**,tests/**,backend/tests/**}"
+        }
+    },
+    "rewrites": [
+        {
+            "source": "/api/(.*)",
+            "destination": "/api/index"
+        }
+    ]
+}

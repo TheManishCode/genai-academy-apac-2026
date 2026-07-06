@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 
-from backend.app.ml.predictor import PredictionEngine
-from backend.app.models.schemas import PredictionRequest, PredictionResponse
+from app.ml.predictor import PredictionEngine
+from app.models.schemas import PredictionRequest, PredictionResponse
 
 router = APIRouter()
 engine = PredictionEngine()
