@@ -17,11 +17,35 @@ class Settings(BaseSettings):
         alias="CORS_ORIGINS",
     )
 
+    # NVIDIA NIM is the base LLM provider for the decision assistant. NIM exposes
+    # an OpenAI-compatible /chat/completions endpoint that can serve many models
+    # (Llama, Nemotron, Mixtral, Gemma, ...), so "model switching" is just picking
+    # a different `model` id against the same endpoint/key.
+    llm_provider: str = "nvidia_nim"
+    nvidia_nim_api_key: str | None = None
+    nvidia_nim_base_url: str = "https://integrate.api.nvidia.com/v1"
+    nvidia_nim_model: str = "meta/llama-3.1-70b-instruct"
+    nvidia_nim_models_raw: str = Field(
+        default=(
+            "meta/llama-3.1-70b-instruct,"
+            "nvidia/llama-3.1-nemotron-70b-instruct,"
+            "mistralai/mixtral-8x22b-instruct-v0.1,"
+            "google/gemma-2-27b-it"
+        ),
+        alias="NVIDIA_NIM_MODELS",
+    )
+    nvidia_nim_temperature: float = 0.4
+    nvidia_nim_max_tokens: int = 512
+
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore")
 
     @property
     def cors_origins(self) -> list[str]:
         return [origin.strip() for origin in self.cors_origins_raw.split(",") if origin.strip()]
+
+    @property
+    def nvidia_nim_models(self) -> list[str]:
+        return [model.strip() for model in self.nvidia_nim_models_raw.split(",") if model.strip()]
 
 
 @lru_cache
